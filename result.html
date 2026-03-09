@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="UTF-8">
+<title>Result</title>
+
+<style>
+
+body{
+    font-family:Arial, Helvetica, sans-serif;
+    text-align:center;
+    background:black;
+    color:white;
+}
+
+.container{
+    max-width:900px;
+    margin:auto;
+    padding:40px;
+}
+
+h1{
+    font-size:38px;
+    margin-bottom:10px;
+}
+
+.style-name{
+    font-size:28px;
+    font-weight:bold;
+    margin-bottom:40px;
+}
+
+.lookbook{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:15px;
+}
+
+@media (max-width:768px){
+
+.lookbook{
+    grid-template-columns:1fr;
+}
+
+}
+
+.lookbook img{
+    width:100%;
+    border-radius:10px;
+    object-fit:cover;
+    transition:0.3s;
+}
+
+.lookbook img:hover{
+    transform:scale(1.05);
+}
+
+.brand-box{
+    background:#ff6a00;
+    padding:30px;
+    border-radius:12px;
+    color:white;
+}
+
+.brand-list{
+    display:flex;
+    justify-content:center;
+    gap:15px;
+    margin-top:20px;
+}
+
+.brand{
+    background:black;
+    padding:8px 18px;
+    border-radius:20px;
+}
+
+</style>
+
+</head><meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<body>
+
+<div class="container">
+
+<h1>YOUR STYLE</h1>
+
+<div id="style-title" class="style-name"></div>
+
+<div id="lookbook" class="lookbook"></div>
+
+<div class="brand-box">
+
+<h2>추천 브랜드</h2>
+
+<div id="brands" class="brand-list"></div>
+
+</div>
+
+</div>
+
+<script src="js/result.js"></script>
+
+</body>
+</html>

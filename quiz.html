@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="UTF-8">
+<title>Quiz</title>
+
+<style>
+
+body{
+    background:black;
+    color:white;
+    font-family:Arial, Helvetica, sans-serif;
+    text-align:center;
+}
+
+.container{
+    max-width:900px;
+    margin:auto;
+    padding-top:80px;
+}
+
+h2{
+    font-size:32px;
+    margin-bottom:40px;
+}
+
+#image-container{
+    display:flex;
+    justify-content:center;
+    gap:40px;
+    margin-top:40px;
+}
+
+/* 사진 */
+
+#image-container img{
+    width:420px;
+    height:520px;
+    object-fit:cover;
+    border-radius:12px;
+    cursor:pointer;
+    transition:0.3s;
+}
+
+/* hover */
+
+#image-container img:hover{
+    transform:scale(1.05);
+}
+
+/* 모바일 */
+
+@media (max-width:768px){
+
+#image-container{
+    flex-direction:column;
+    align-items:center;
+    gap:25px;
+}
+
+#image-container img{
+    width:85%;
+    height:auto;
+}
+
+}
+
+.progress{
+    margin-top:30px;
+    font-size:18px;
+    color:#ff6a00;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<div class="container">
+
+<h2>어떤 스타일이 더 마음에 드나요?</h2>
+
+<div id="image-container"></div>
+
+<div id="progress" class="progress"></div>
+
+</div>
+
+<script src="js/quiz.js"></script>
+
+</body>
+</html>
